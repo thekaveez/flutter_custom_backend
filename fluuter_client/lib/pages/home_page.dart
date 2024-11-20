@@ -118,6 +118,9 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Center(child: const Text('Drivers')),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           formPopup(context);
@@ -125,7 +128,7 @@ class HomePage extends StatelessWidget {
         child: const Icon(Icons.add),
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         child: Consumer<DriverProvider>(
           builder: (context, driverProvider, child) {
             final drivers = driverProvider.drivers;
